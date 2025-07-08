@@ -1,0 +1,100 @@
+.movie-card {
+  font-size: var(--size-base);
+  width: 230px;
+  /* height: 350px; */
+  /* aspect-ratio: 3/4; */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--clr-slate600);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.movie-card .movie-poster {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.movie-card .movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.movie-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.5s opacity;
+}
+
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
+
+.movie-card:hover .movie-poster img {
+  transform: scale(1.1);
+}
+
+.like-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-overlay .like-btn {
+  height: 35px;
+  width: 35px;
+  border: 2px solid var(--clr-light);
+  /* display: inline-block; */
+  /* line-height: 2.1rem; */
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.like-btn:hover {
+  background: var(--clr-rose);
+}
+
+.like-btn:active .heart-icon {
+  color: var(--clr-rose);
+}
+
+.like-btn:active {
+  background: var(--clr-light);
+}
+
+.movie-details {
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.movie-details>span {
+  display: block;
+}
+
+.movie-title {
+  font-size: var(--size-base);
+  font-weight: 550;
+}
+
+.movie-year {
+  font-size: 0.8rem;
+  font-weight: 400;
+}

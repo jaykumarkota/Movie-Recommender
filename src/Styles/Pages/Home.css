@@ -1,0 +1,53 @@
+.Home {}
+
+.hero-msg {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.popular-msg {
+  text-align: left;
+  font-size: var(--size-lg);
+}
+
+.input-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-input {
+  width: 350px;
+  border: none;
+  outline: none;
+  background: var(--clr-slate800);
+  padding: 10px 25px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+.movie-input::placeholder {
+  color: var(--clr-slate600);
+}
+
+.movie-input[type=text] {
+  color: var(--clr-light);
+  font-weight: 500;
+  font-size: var(--size-sm);
+}
+
+.search-btn {
+  padding: 10px 25px;
+  background: var(--clr-rose);
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  font-size: var(--size-sm);
+}
+
+.movies-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  row-gap: 1.3rem;
+  column-gap: 0.3rem;
+}
