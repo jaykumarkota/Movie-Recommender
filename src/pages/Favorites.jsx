@@ -1,6 +1,8 @@
 function Favorites() {
   return (
-    <><div>still nothing here</div></>
+    <div className="fav-page">
+      <p className="no-fav-msg"><strong>Oops! </strong><br />you don't have any favorite movies yet!</p>
+    </div>
   );
 }
 export default Favorites;

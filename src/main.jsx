@@ -6,6 +6,7 @@ import './index.css'
 import './Styles/components/NavBar.css'
 import './Styles/components/MovieCard.css'
 import './Styles/Pages/Home.css'
+import './Styles/Pages/Favorites.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 
