@@ -81,6 +81,15 @@ function Home() {
     }
   }
 
+  // if (error) {
+  //   return <div className="error-msg">{error}</div>;
+  // }
+
+  // if (loading) {
+  //   return <div className="loading">Loading...</div>;
+  // }
+
+
   return (
     <div className="Home container">
       <div className="hero-msg">

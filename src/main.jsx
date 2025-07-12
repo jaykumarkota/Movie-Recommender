@@ -9,12 +9,15 @@ import './Styles/Pages/Home.css'
 import './Styles/Pages/Favorites.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
+import { MovieProvider } from './contexts/MovieContext.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter>
+  // <StrictMode>
+  <BrowserRouter>
+    <MovieProvider>
       <App />
-    </BrowserRouter>
-  </StrictMode>,
+    </MovieProvider>
+  </BrowserRouter>
+  // </StrictMode>,
 )

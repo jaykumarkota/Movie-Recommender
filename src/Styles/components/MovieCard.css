@@ -70,11 +70,15 @@
   font-size: 0.9em;
 }
 
-.like-btn:hover {
+/* .like-btn:hover {
   background: var(--clr-rose);
-}
+} */
 
 .like-btn:active .heart-icon {
+  color: var(--clr-rose);
+}
+
+.like-btn.active .heart-icon {
   color: var(--clr-rose);
 }
 

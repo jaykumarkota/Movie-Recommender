@@ -1,13 +1,16 @@
 import { Outlet } from 'react-router-dom';
 import NavBar from '../components/NavBar.jsx';
+import { MovieContext } from '../contexts/MovieContext.jsx';
 function MainLayout() {
   return (
     <>
       <NavBar />
-      <main>
+      <main className='main-content'>
         <Outlet />
       </main>
     </>
   );
+  {/* <MovieContext.Provider value={{ name: "Guruvu Garu" }}> */ }
+  // </MovieContext.Provider>
 }
 export default MainLayout;

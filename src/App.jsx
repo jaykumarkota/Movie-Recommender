@@ -5,9 +5,11 @@ import Home from './pages/Home.jsx'
 import MainLayout from './layouts/MainLayout.jsx'
 import { Route, Routes } from 'react-router-dom'
 import Favorites from './pages/Favorites.jsx'
+import { MovieProvider } from './contexts/MovieContext.jsx'
 function App() {
 
   return (
+
     <Routes>
       <Route element={<MainLayout />}>
         <Route path='/' element={<Home />} />
