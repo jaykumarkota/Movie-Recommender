@@ -8,16 +8,18 @@ import './Styles/components/MovieCard.css'
 import './Styles/Pages/Home.css'
 import './Styles/Pages/Favorites.css'
 import App from './App.jsx'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, HashRouter } from 'react-router-dom'
 import { MovieProvider } from './contexts/MovieContext.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
+      {/* <BrowserRouter> */}
       <MovieProvider>
         <App />
       </MovieProvider>
-    </BrowserRouter>
+      {/* </BrowserRouter> */}
+    </HashRouter>
   </StrictMode>,
 )
