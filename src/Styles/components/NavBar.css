@@ -79,7 +79,7 @@
     height: var(--size-xl);
     width: var(--size-xl);
     color: var(--clr-slate600);
-    font-size: var(--size-base);
+    font-size: var(--size-xl);
     cursor: pointer;
   }
 
@@ -95,7 +95,7 @@
 
 @media (max-width:475px) {
   .navbar__logo {
-    font-size: var(--size-base);
+    font-size: var(--size-xl);
   }
 
   .navbar__menu {

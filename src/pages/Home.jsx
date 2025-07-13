@@ -4,12 +4,37 @@ import MovieCard from "../components/MovieCard.jsx";
 import { useEffect, useState } from "react";
 import { getPopularMovies, searchMovies } from "../services/api.js";
 import { faL } from "@fortawesome/free-solid-svg-icons/faL";
+import { useLocation } from "react-router-dom";
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [hasSearched, setHasSearched] = useState(false);
+  const location = useLocation();
+
+
+  // useEffect(() => {
+  //   if (!hasSearched) {
+  //     setSearchQuery("");
+  //     setHasSearched(false);
+  //     setLoading(true);
+  //     getPopularMovies()
+  //       .then((popularMovies) => {
+  //         setMovies(popularMovies);
+  //         setError(null);
+  //       })
+  //       .catch(() => setError("Error has occurred!"))
+  //       .finally(() => setLoading(false));
+  //   }
+  // }, [hasSearched]);
+  // useEffect(() => {
+  //   if (searchQuery.trim() === "") {
+  //     setHasSearched(false)
+  //   }
+  // }, [searchQuery]);
+
 
   useEffect(() => {
     const loadPopularMovies = async () => {
@@ -63,11 +88,10 @@ function Home() {
   const handleSearch = async (e) => {
     e.preventDefault();
 
-    if (!searchQuery.trim())
-      return
-    if (loading)
+    if (!searchQuery.trim() || loading)
       return
     setLoading(true);
+    setHasSearched(true);
 
     try {
       const getSearchMovies = await searchMovies(searchQuery);
@@ -80,6 +104,11 @@ function Home() {
       setLoading(false);
     }
   }
+  // useEffect(() => {
+  //   if (searchQuery.trim() === "")
+  //     setHasSearched(false);
+
+  // }, [searchQuery]);
 
   // if (error) {
   //   return <div className="error-msg">{error}</div>;
@@ -109,8 +138,11 @@ function Home() {
           <FontAwesomeIcon className="search-icon" icon={faSearch} />
         </button>
       </form>
-      <div className="popular-msg">
-        <h3>Popular Movies</h3>
+      <div className="popular-msg section">
+        <h3>{hasSearched && searchQuery.trim()
+          ? "Your Search Results"
+          : "Popular Movies"}
+        </h3>
       </div>
 
       {error ? (

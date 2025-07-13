@@ -7,11 +7,12 @@ function NavBar() {
   // const data = useContext(MovieContext);
   return (
     <div className="navbar container">
-      <span className="navbar__logo">Guruvu Garu</span>
+      {/* <span className="navbar__logo">Guruvu Garu</span> */}
+      <span className="navbar__logo">JK Films</span>
       <nav>
         <ul className="navbar__menu">
-          <li><Link to='/' className="navbar__links" href="#home">Home</Link></li>
-          <li><Link to='/favorites' className="navbar__links" href="#favorites">Favorites</Link></li>
+          <li><Link to='/' className="navbar__links">Home</Link></li>
+          <li><Link to='/favorites' className="navbar__links">Favorites</Link></li>
           <li><a className="navbar__links" href="#Settings">Settings</a></li>
           <li className="navbar__line"></li>
           <li><button className='navbar__sun'><FontAwesomeIcon icon={faLightbulb} />

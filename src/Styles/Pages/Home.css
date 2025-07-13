@@ -8,6 +8,8 @@
 .popular-msg {
   text-align: left;
   font-size: var(--size-lg);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .input-form {
@@ -50,4 +52,50 @@
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   row-gap: 1.3rem;
   column-gap: 0.3rem;
+
+}
+
+
+/* @media (max-width:1280px) {
+  
+} */
+
+
+/* @media (max-width:1024px) {
+  
+} */
+
+
+/* @media (max-width:768px) {} */
+
+
+@media (max-width:640px) {
+  .hero-msg {
+    font-size: var(--size-sm);
+  }
+
+  .popular-msg {
+    font-size: var(--size-base);
+  }
+
+  .movie-input {
+    width: 300px;
+    font-size: var(--size-sm);
+    padding: 10px 20px;
+  }
+
+  .search-btn {
+    padding: 10px 20px;
+  }
+
+  .movie-input::placeholder {
+    font-size: var(--size-sm);
+  }
+}
+
+
+@media (max-width:475px) {
+  /* .popular-msg {
+    padding: 0 15px;
+  } */
 }
