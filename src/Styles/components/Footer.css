@@ -1,0 +1,18 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: var(--size-base);
+}
+
+.footer-msg {
+  color: var(--clr-slate400);
+}
+
+@media (max-width:475px) {
+  .footer {
+    font-size: var(--size-sm);
+  }
+}
