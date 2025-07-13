@@ -13,11 +13,11 @@ import { MovieProvider } from './contexts/MovieContext.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-  // <StrictMode>
-  <BrowserRouter basename="/Movie-Recommender">
-    <MovieProvider>
-      <App />
-    </MovieProvider>
-  </BrowserRouter>
-  // </StrictMode>,
+  <StrictMode>
+    <BrowserRouter>
+      <MovieProvider>
+        <App />
+      </MovieProvider>
+    </BrowserRouter>
+  </StrictMode>,
 )
